@@ -1,0 +1,44 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <h1>{{profile}}'s Qualys reports generation</h1>
+
+        <!-- Errors list -->
+        {% if errors|length > 0 %}
+          <h3 style="color:Tomato;">{{errors|length}} error(s) raised</h3>
+          <ul>
+            {% for error in errors %}
+              <li>{{error}}</li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          <h3 style="color:MediumSeaGreen;">No error raised</h3>
+        {% endif %}
+
+        <!-- Warnings list -->
+        {% if warnings|length > 0 %}
+          <h3 style="color:Orange;">{{warnings|length}} warning(s) raised</h3>
+          <ul>
+            {% for warning in warnings %}
+              <li>{{warning}}</li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          <h3 style="color:MediumSeaGreen;">No warning raised</h3>
+        {% endif %}
+
+        <!-- Reports list -->
+        {% if reports|length > 0 %}
+          <h3 style="color:MediumSeaGreen;">{{reports|length}} report(s) generated</h3>
+          <ul>
+            {% for report in reports %}
+              <li><a href="http://soc007.int.excellium.lu/scan/{{report.profile.name}}/{{report.filename}}">{{report.filename}}</a></li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          <h3 style="color:Tomato;">No report generated</h3>
+        {% endif %}
+
+    </body>
+</html>

@@ -1,0 +1,267 @@
+{
+  "default": {
+    "directory": "/var/www/soc_dashboard_parent/web/scan/",
+    "timeformat": "%F",
+    "mail": {
+      "subject": "Qualys reports generation",
+      "template": null,
+      "recipients": ["<recipient 1>", "recipient 2", "..."],
+      "cc": [],
+      "sender": "<sender name>",
+      "server": "<send to server>"
+    },
+    "healtcheck": {
+      "timediff_seconds": 864000
+    }
+  },
+
+
+  "profiles": {
+
+    "ARE": {
+      "directory": "/var/www/soc_dashboard_parent/web/scan/ARE/",
+      "mail": {
+        "cc": []
+      },
+      "scans": ["EyeGuard - ARE - Monthly Scan"],
+      "reports": [
+        {"name": "EyeGuard - ARE - Summary Report", "template": "EyeGuard - VulnScan Report (Summary)", "format": "pdf"},
+        {"name": "EyeGuard - ARE - Confirmed Vulnerabilities Report", "template": "EyeGuard - VulnScan Report (Confirmed Vulnerabilities)", "format": "pdf"},
+        {"name": "EyeGuard - ARE - Potential Vulnerabilities Report", "template": "EyeGuard - VulnScan Report (Potential Vulnerabilities)", "format": "pdf"},
+        {"name": "EyeGuard - ARE - Information Gathered Report", "template": "EyeGuard - VulnScan Report (Information Gathered)", "format": "pdf"}
+      ]
+    },
+
+    "CHA": {
+      "directory": "/var/www/soc_dashboard_parent/web/scan/CHA/",
+      "mail": {
+        "cc": ["rtribou", "jpclipffel"]
+      },
+      "scans": ["EyeGuard - CHA - Monthly Scan Range 1",
+                "EyeGuard - CHA - Monthly Scan Range 2"],
+      "reports": [
+        {"name": "EyeGuard - CHA - Summary Report", "template": "EyeGuard - VulnScan Report (Summary)", "format": "pdf"},
+        {"name": "EyeGuard - CHA - Confirmed Vulnerabilities Report", "template": "EyeGuard - VulnScan Report (Confirmed Vulnerabilities)", "format": "pdf"},
+        {"name": "EyeGuard - CHA - Potential Vulnerabilities Report", "template": "EyeGuard - VulnScan Report (Potential Vulnerabilities)", "format": "pdf"},
+        {"name": "EyeGuard - CHA - Information Gathered Report", "template": "EyeGuard - VulnScan Report (Information Gathered)", "format": "pdf"}
+      ]
+    },
+
+    "CHA_Critical": {
+      "directory": "/var/www/soc_dashboard_parent/web/scan/CHA_Critical/",
+      "mail": {
+        "cc": ["rtribou", "jpclipffel"]
+      },
+      "scans": ["EyeGuard - CHA - Monthly Critical Scan"],
+      "reports": [
+        {"name": "EyeGuard - CHA (Critical) - Summary Report", "template": "EyeGuard - VulnScan Report (Summary)", "format": "pdf"},
+        {"name": "EyeGuard - CHA (Critical) - Confirmed Vulnerabilities Report", "template": "EyeGuard - VulnScan Report (Confirmed Vulnerabilities)", "format": "pdf"},
+        {"name": "EyeGuard - CHA (Critical) - Potential Vulnerabilities Report", "template": "EyeGuard - VulnScan Report (Potential Vulnerabilities)", "format": "pdf"},
+        {"name": "EyeGuard - CHA (Critical) - Information Gathered Report", "template": "EyeGuard - VulnScan Report (Information Gathered)", "format": "pdf"}
+      ]
+    },
+
+    "EXC": {
+      "directory": "/var/www/soc_dashboard_parent/web/scan/EXC/",
+      "mail": {
+        "cc": ["vbounyavet", "gbruneau"]
+      },
+      "scans": ["EyeGuard - XLM - D1",
+                "EyeGuard - XLM - D2",
+                "EyeGuard - XLM - D3",
+                "EyeGuard - XLM - D4"],
+      "reports": [
+        {"name": "EyeGuard - EXC - Summary Report", "template": "EyeGuard - VulnScan Report (Summary)", "format": "pdf"},
+        {"name": "EyeGuard - EXC - Confirmed Vulnerabilities Report", "template": "EyeGuard - VulnScan Report (Confirmed Vulnerabilities)", "format": "pdf"},
+        {"name": "EyeGuard - EXC - Potential Vulnerabilities Report", "template": "EyeGuard - VulnScan Report (Potential Vulnerabilities)", "format": "pdf"},
+        {"name": "EyeGuard - EXC - Information Gathered Report", "template": "EyeGuard - VulnScan Report (Information Gathered)", "format": "pdf"}
+      ]
+    },
+
+    "SAF": {
+      "directory": "/var/www/soc_dashboard_parent/web/scan/SAF/",
+      "mail": {
+        "cc": []
+      },
+      "scans": ["EyeGuard - SAF - Monthly Scan"],
+      "reports": [
+        {"name": "EyeGuard - SAF - Summary Report", "template": "EyeGuard - VulnScan Report (Summary)", "format": "pdf"},
+        {"name": "EyeGuard - SAF - Confirmed Vulnerabilities Report", "template": "EyeGuard - VulnScan Report (Confirmed Vulnerabilities)", "format": "pdf"},
+        {"name": "EyeGuard - SAF - Potential Vulnerabilities Report", "template": "EyeGuard - VulnScan Report (Potential Vulnerabilities)", "format": "pdf"},
+        {"name": "EyeGuard - SAF - Information Gathered Report", "template": "EyeGuard - VulnScan Report (Information Gathered)", "format": "pdf"}
+      ]
+    },
+
+    "JAG_BU-SH": {
+      "directory": "/var/www/soc_dashboard_parent/web/scan/JAG_BU-SH/",
+      "mail": {
+        "cc": ["vbounyavet", "cberaud"]
+      },
+      "scans": ["EyeGuard - JAG - BU-SH - Monthly Scan"],
+      "reports": [
+        {"name": "EyeGuard - JAG BU-SH - Summary Report", "template": "EyeGuard - VulnScan Report (Summary)", "format": "pdf"},
+        {"name": "EyeGuard - JAG BU-SH - Confirmed Vulnerabilities Report", "template": "EyeGuard - VulnScan Report (Confirmed Vulnerabilities)", "format": "pdf"},
+        {"name": "EyeGuard - JAG BU-SH - Potential Vulnerabilities Report", "template": "EyeGuard - VulnScan Report (Potential Vulnerabilities)", "format": "pdf"},
+        {"name": "EyeGuard - JAG BU-SH - Information Gathered Report", "template": "EyeGuard - VulnScan Report (Information Gathered)", "format": "pdf"}
+      ]
+    },
+
+    "JAG_SI": {
+      "directory": "/var/www/soc_dashboard_parent/web/scan/JAG_SI/",
+      "mail": {
+        "cc": ["vbounyavet", "cberaud"]
+      },
+      "scans": ["EyeGuard - JAG - SI - Monthly Scan"],
+      "reports": [
+        {"name": "EyeGuard - JAG SI - Summary Report", "template": "EyeGuard - VulnScan Report (Summary)", "format": "pdf"},
+        {"name": "EyeGuard - JAG SI - Confirmed Vulnerabilities Report", "template": "EyeGuard - VulnScan Report (Confirmed Vulnerabilities)", "format": "pdf"},
+        {"name": "EyeGuard - JAG SI - Potential Vulnerabilities Report", "template": "EyeGuard - VulnScan Report (Potential Vulnerabilities)", "format": "pdf"},
+        {"name": "EyeGuard - JAG SI - Information Gathered Report", "template": "EyeGuard - VulnScan Report (Information Gathered)", "format": "pdf"}
+      ]
+    },
+
+    "KBL": {
+      "directory": "/var/www/soc_dashboard_parent/web/scan/KBL/",
+      "mail": {
+        "cc": ["gbruneau", "skaiser"]
+      },
+      "scans": ["EyeGuard - KBL - Monthly Scan - D1",
+                "EyeGuard - KBL - Monthly Scan - D2",
+                "EyeGuard - KBL - Monthly Scan - D3",
+                "EyeGuard - KBL - Monthly Scan - D5"],
+      "reports": [
+        {"name": "EyeGuard - KBL - Summary Report", "template": "EyeGuard - VulnScan Report (Summary)", "format": "pdf"},
+        {"name": "EyeGuard - KBL - Confirmed Vulnerabilities Report", "template": "EyeGuard - VulnScan Report (Confirmed Vulnerabilities)", "format": "pdf"},
+        {"name": "EyeGuard - KBL - Potential Vulnerabilities Report", "template": "EyeGuard - VulnScan Report (Potential Vulnerabilities)", "format": "pdf"},
+        {"name": "EyeGuard - KBL - Information Gathered Report", "template": "EyeGuard - VulnScan Report (Information Gathered)", "format": "pdf"}
+      ]
+    },
+
+    "LAL": {
+      "directory": "/var/www/soc_dashboard_parent/web/scan/LAL/",
+      "mail": {
+        "cc": ["rdion", "griehl"]
+      },
+      "scans": ["EyeGuard - LAL - Weekly Scan"],
+      "reports": [
+        {"name": "EyeGuard - LAL - Summary Report", "template": "EyeGuard - VulnScan Report (Summary)", "format": "pdf"},
+        {"name": "EyeGuard - LAL - Confirmed Vulnerabilities Report", "template": "EyeGuard - VulnScan Report (Confirmed Vulnerabilities)", "format": "pdf"},
+        {"name": "EyeGuard - LAL - Potential Vulnerabilities Report", "template": "EyeGuard - VulnScan Report (Potential Vulnerabilities)", "format": "pdf"},
+        {"name": "EyeGuard - LAL - Information Gathered Report", "template": "EyeGuard - VulnScan Report (Information Gathered)", "format": "pdf"}
+      ]
+    },
+
+    "LOM_LUX": {
+      "directory": "/var/www/soc_dashboard_parent/web/scan/LOM_LUX/",
+      "mail": {
+        "cc": ["griehl", "gbruneau"]
+      },
+      "scans": ["EyeGuard - LOM LUX - Monthly Scan"],
+      "reports": [
+        {"name": "EyeGuard - LOM LUX - Summary Report", "template": "EyeGuard - VulnScan Report (Summary)", "format": "pdf"},
+        {"name": "EyeGuard - LOM LUX - Confirmed Vulnerabilities Report", "template": "EyeGuard - VulnScan Report (Confirmed Vulnerabilities)", "format": "pdf"},
+        {"name": "EyeGuard - LOM LUX - Potential Vulnerabilities Report", "template": "EyeGuard - VulnScan Report (Potential Vulnerabilities)", "format": "pdf"},
+        {"name": "EyeGuard - LOM LUX - Information Gathered Report", "template": "EyeGuard - VulnScan Report (Information Gathered)", "format": "pdf"}
+      ]
+    },
+
+    "LOM_US": {
+      "directory": "/var/www/soc_dashboard_parent/web/scan/LOM_US/",
+      "mail": {
+        "cc": ["griehl", "gbruneau"]
+      },
+      "scans": ["EyeGuard - LOM US - Monthly Scan"],
+      "reports": [
+        {"name": "EyeGuard - LOM US - Summary Report", "template": "EyeGuard - VulnScan Report (Summary)", "format": "pdf"},
+        {"name": "EyeGuard - LOM US - Confirmed Vulnerabilities Report", "template": "EyeGuard - VulnScan Report (Confirmed Vulnerabilities)", "format": "pdf"},
+        {"name": "EyeGuard - LOM US - Potential Vulnerabilities Report", "template": "EyeGuard - VulnScan Report (Potential Vulnerabilities)", "format": "pdf"},
+        {"name": "EyeGuard - LOM US - Information Gathered Report", "template": "EyeGuard - VulnScan Report (Information Gathered)", "format": "pdf"}
+      ]
+    },
+
+    "LUX": {
+      "directory": "/var/www/soc_dashboard_parent/web/scan/LUX/",
+      "mail": {
+        "cc": ["gbruneau", "griehl"]
+      },
+      "scans": ["EyeGuard - LUX - Weekly Scan"],
+      "reports": [
+        {"name": "EyeGuard - LUX - Summary Report", "template": "EyeGuard - VulnScan Report (Summary)", "format": "pdf"},
+        {"name": "EyeGuard - LUX - Confirmed Vulnerabilities Report", "template": "EyeGuard - VulnScan Report (Confirmed Vulnerabilities)", "format": "pdf"},
+        {"name": "EyeGuard - LUX - Potential Vulnerabilities Report", "template": "EyeGuard - VulnScan Report (Potential Vulnerabilities)", "format": "pdf"},
+        {"name": "EyeGuard - LUX - Information Gathered Report", "template": "EyeGuard - VulnScan Report (Information Gathered)", "format": "pdf"}
+      ]
+    },
+
+    "PWC": {
+      "directory": "/var/www/soc_dashboard_parent/web/scan/PWC/",
+      "mail": {
+        "cc": ["rtribou", "jpclipffel"]
+      },
+      "scans": ["EyeGuard - PWC - Monthly Scan"],
+      "reports": [
+        {"name": "EyeGuard - PWC - Summary Report", "template": "EyeGuard - VulnScan Report (Summary)", "format": "pdf"},
+        {"name": "EyeGuard - PWC - Confirmed Vulnerabilities Report", "template": "EyeGuard - VulnScan Report (Confirmed Vulnerabilities)", "format": "pdf"},
+        {"name": "EyeGuard - PWC - Potential Vulnerabilities Report", "template": "EyeGuard - VulnScan Report (Potential Vulnerabilities)", "format": "pdf"},
+        {"name": "EyeGuard - PWC - Information Gathered Report", "template": "EyeGuard - VulnScan Report (Information Gathered)", "format": "pdf"}
+      ]
+    },
+
+    "ENC": {
+      "directory": "/var/www/soc_dashboard_parent/web/scan/ENC/",
+      "mail": {
+        "cc": ["rtribou", "jpclipffel"]
+      },
+      "scans": ["Eyeguard - ENC - Monthly Scan"],
+      "reports": [
+        {"name": "EyeGuard - ENC - Summary Report", "template": "EyeGuard - VulnScan Report (Summary)", "format": "pdf"},
+        {"name": "EyeGuard - ENC - Confirmed Vulnerabilities Report", "template": "EyeGuard - VulnScan Report (Confirmed Vulnerabilities)", "format": "pdf"},
+        {"name": "EyeGuard - ENC - Potential Vulnerabilities Report", "template": "EyeGuard - VulnScan Report (Potential Vulnerabilities)", "format": "pdf"},
+        {"name": "EyeGuard - ENC - Information Gathered Report", "template": "EyeGuard - VulnScan Report (Information Gathered)", "format": "pdf"}
+      ]
+    },
+
+    "ENC_Range2": {
+      "directory": "/var/www/soc_dashboard_parent/web/scan/ENC_Range2/",
+      "mail": {
+        "cc": ["rtribou", "jpclipffel"]
+      },
+      "scans": ["Eyeguard - Encevo - Monthly Scan Range 2"],
+      "reports": [
+        {"name": "EyeGuard - ENC Range 2 - Summary Report", "template": "EyeGuard - VulnScan Report (Summary)", "format": "pdf"},
+        {"name": "EyeGuard - ENC Range 2 - Confirmed Vulnerabilities Report", "template": "EyeGuard - VulnScan Report (Confirmed Vulnerabilities)", "format": "pdf"},
+        {"name": "EyeGuard - ENC Range 2 - Potential Vulnerabilities Report", "template": "EyeGuard - VulnScan Report (Potential Vulnerabilities)", "format": "pdf"},
+        {"name": "EyeGuard - ENC Range 2 - Information Gathered Report", "template": "EyeGuard - VulnScan Report (Information Gathered)", "format": "pdf"}
+      ]
+    },
+
+    "ESM": {
+      "directory": "/var/www/soc_dashboard_parent/web/scan/ESM/",
+      "mail": {
+        "cc": []
+      },
+      "scans": ["Eyeguard - ESM - Monthly Scan"],
+      "reports": [
+        {"name": "EyeGuard - ESM - Summary Report", "template": "EyeGuard - VulnScan Report (Summary)", "format": "pdf"},
+        {"name": "EyeGuard - ESM - Confirmed Vulnerabilities Report", "template": "EyeGuard - VulnScan Report (Confirmed Vulnerabilities)", "format": "pdf"},
+        {"name": "EyeGuard - ESM - Potential Vulnerabilities Report", "template": "EyeGuard - VulnScan Report (Potential Vulnerabilities)", "format": "pdf"},
+        {"name": "EyeGuard - ESM - Information Gathered Report", "template": "EyeGuard - VulnScan Report (Information Gathered)", "format": "pdf"}
+      ]
+    },
+    
+    "LTR": {
+      "directory": "/var/www/soc_dashboard_parent/web/scan/LTR/",
+      "mail": {
+        "cc": ["cberaud", "skaiser"]
+      },
+      "scans": ["EyeGuard - LTR - Weekly scan"],
+      "reports": [
+        {"name": "EyeGuard - LTR - Summary Report", "template": "EyeGuard - VulnScan Report (Summary)", "format": "pdf"},
+        {"name": "EyeGuard - LTR - Confirmed Vulnerabilities Report", "template": "EyeGuard - VulnScan Report (Confirmed Vulnerabilities)", "format": "pdf"},
+        {"name": "EyeGuard - LTR - Potential Vulnerabilities Report", "template": "EyeGuard - VulnScan Report (Potential Vulnerabilities)", "format": "pdf"},
+        {"name": "EyeGuard - LTR - Information Gathered Report", "template": "EyeGuard - VulnScan Report (Information Gathered)", "format": "pdf"}
+      ]
+    }
+
+  }
+}
